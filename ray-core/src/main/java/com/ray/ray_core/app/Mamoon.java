@@ -1,6 +1,7 @@
 package com.ray.ray_core.app;
 
 import android.content.Context;
+import android.os.Handler;
 
 import java.util.HashMap;
 
@@ -28,5 +29,10 @@ public final class Mamoon {
     public static Context getApplicationContext(){
         return getConfigurations(ConfigType.APPLICATION_CONTEXT);
     }
+
+    public static Handler getHandler() {
+        return getConfigurations(ConfigType.HANDLER);
+    }
+
 
 }

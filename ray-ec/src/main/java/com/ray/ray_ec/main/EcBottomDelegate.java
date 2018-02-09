@@ -6,6 +6,9 @@ import com.ray.ray_core.delegates.bottom.BaseBottomDelegate;
 import com.ray.ray_core.delegates.bottom.BottomItemDelegate;
 import com.ray.ray_core.delegates.bottom.BottomTabBean;
 import com.ray.ray_core.delegates.bottom.ItemBuilder;
+import com.ray.ray_ec.main.discover.DisconverDelegate;
+import com.ray.ray_ec.main.index.IndexDelegate;
+import com.ray.ray_ec.main.sort.SortDelegate;
 
 import java.util.LinkedHashMap;
 

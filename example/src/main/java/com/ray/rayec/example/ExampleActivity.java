@@ -16,6 +16,8 @@ import com.ray.ray_ec.sign.ISignListener;
 import com.ray.ray_ec.sign.SignInDelegate;
 import com.ray.ray_ec.sign.SignUpDelegate;
 
+import qiu.niorgai.StatusBarCompat;
+
 public class ExampleActivity extends PorxyActivity implements ISignListener,ILauncherListener {
 
     @Override
@@ -25,6 +27,7 @@ public class ExampleActivity extends PorxyActivity implements ISignListener,ILau
             supportActionBar.hide();
         }
         Mamoon.getConfigurator().withActivity(this);
+        StatusBarCompat.translucentStatusBar(this,true);
         super.onCreate(savedInstanceState);
     }
 

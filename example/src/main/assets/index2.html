@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <script>
+
+
+         function callAndroid(){
+            // 由于对象映射，所以调用test对象等于调用Android映射的对象
+             var command = {
+                'action':'test'  
+             };
+            Mamoon.event(JSON.stringify(command));
+         }
+      </script>
+    </head>
+
+    <body>
+        <button id="test" onclick="callAndroid()">测试页面1</button>
+        <a  href="second2.html">跳转</a>
+    </body>
+</html>

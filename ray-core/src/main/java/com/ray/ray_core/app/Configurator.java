@@ -1,6 +1,7 @@
 package com.ray.ray_core.app;
 
 import android.app.Activity;
+import android.os.Handler;
 
 import com.joanzapata.iconify.IconFontDescriptor;
 import com.joanzapata.iconify.Iconify;
@@ -19,9 +20,11 @@ public class Configurator {
     private static final HashMap<Object,Object> Ray_CONFIGS = new HashMap<>();
     private static final ArrayList<IconFontDescriptor> ICONS = new ArrayList<>();
     private static final ArrayList<Interceptor> INTERCEPTOR = new ArrayList<>();
+    private static final Handler HANDLER = new Handler();
 
     private Configurator() {
         Ray_CONFIGS.put(ConfigType.CONFIG_READY.name(),false);
+        Ray_CONFIGS.put(ConfigType.HANDLER,HANDLER);
     }
 
     public static Configurator getInstance(){
@@ -84,6 +87,11 @@ public class Configurator {
 
     public final Configurator withActivity(Activity activity){
         Ray_CONFIGS.put(ConfigType.ACTIVITY,activity);
+        return this;
+    }
+
+    public final Configurator withJavascriptInterface(String jsInterface){
+        Ray_CONFIGS.put(ConfigType.JAVASCRIPT_INTERFACE,jsInterface);
         return this;
     }
 

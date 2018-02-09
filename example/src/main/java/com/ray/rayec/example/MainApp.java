@@ -8,6 +8,7 @@ import com.orhanobut.logger.Logger;
 import com.ray.ray_core.app.Mamoon;
 import com.ray.ray_core.net.interceptors.DebugInterceptor;
 import com.ray.ray_ec.database.DatabaseManager;
+import com.ray.ray_ec.icon.FontEc2Module;
 import com.ray.ray_ec.icon.FontEcModule;
 
 /**
@@ -20,12 +21,14 @@ public class MainApp extends Application {
     public void onCreate() {
         super.onCreate();
         Mamoon.init(this)
-                .withApiHost("http://127.0.0.1")
+                .withApiHost("http://127.0.0.1:8080/restservice/api/")
                 .withIcon(new FontAwesomeModule())
                 .withIcon(new FontEcModule())
-                .withInterceptor(new DebugInterceptor("index",R.raw.data1))
+                .withIcon(new FontEc2Module())
+//                .withInterceptor(new DebugInterceptor("index",R.raw.data1))
                 .withWeChatAppId("")
                 .withWeChatAppSecret("")
+                .withJavascriptInterface("Mamoon")
             .configure();
 
         Logger.addLogAdapter(new AndroidLogAdapter());

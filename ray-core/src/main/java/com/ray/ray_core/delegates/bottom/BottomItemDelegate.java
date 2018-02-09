@@ -20,7 +20,7 @@ public abstract class BottomItemDelegate extends MammonDelegate {
 
     @Override
     public boolean onBackPressedSupport() {
-        if(TOUCH_TIME > 0 && (System.currentTimeMillis() - TOUCH_TIME) > WAIT_TIME){
+        if(TOUCH_TIME > 0 && (System.currentTimeMillis() - TOUCH_TIME) < WAIT_TIME){
             _mActivity.finish();
         }else {
             TOUCH_TIME = System.currentTimeMillis();
